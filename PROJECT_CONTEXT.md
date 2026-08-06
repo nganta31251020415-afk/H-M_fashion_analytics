@@ -437,26 +437,10 @@ Không tự động thay đổi kiến trúc dự án nếu chưa có sự đồ
 Current Status:
 
 ✅ Phase 0 — Completed
-
 ✅ Phase 1 — Completed
-
 ✅ Phase 2 — Completed
+✅ Phase 3 — Data Cleaning & Data Validation (Completed)
 
 Next Phase:
 
-Phase 3 — Data Cleaning & Data Validation
-
-Mục tiêu:
-
-- Làm sạch dữ liệu
-- Chuẩn hóa kiểu dữ liệu
-- Xử lý Missing Values
-- Kiểm tra Referential Integrity
-- Kiểm tra Data Quality
-- Lưu dữ liệu sạch vào data/processed
-
-Lưu ý:
-
-Không chỉnh sửa dữ liệu trong thư mục data/raw.
-
-Toàn bộ dữ liệu sau xử lý phải được lưu vào data/processed.
+Phase 4 — SQL Analytics & Exploratory Data Analysis (EDA)

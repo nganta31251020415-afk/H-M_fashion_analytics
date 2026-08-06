@@ -1,28 +1,26 @@
 # Business Understanding & Business Questions
 ## Dự án Phân tích Dữ liệu & Machine Learning – H&M Personalized Fashion Analytics
 
-> **Phiên bản tài liệu:** v1.0  
-> **Trạng thái:** Hoàn thành Phase 0 – Business Understanding
+> **Phiên bản tài liệu:** v2.0  
+> **Trạng thái:** Hoàn thành Cập nhật Phase 0 – Business Understanding (Mentor Feedback Aligned)
 
 ---
 
 # 1. Mục tiêu dự án
 
-Mục tiêu của dự án không chỉ là xây dựng các mô hình Machine Learning, mà là thực hiện một **dự án Data Analytics hoàn chỉnh theo quy trình thực tế trong doanh nghiệp**, từ việc hiểu bài toán kinh doanh cho đến xây dựng dashboard, phân tích dữ liệu, dự báo và đưa ra các khuyến nghị phục vụ việc ra quyết định.
+Mục tiêu của dự án không chỉ là xây dựng các mô hình Machine Learning độc lập, mà là thực hiện một **dự án Data Analytics hoàn chỉnh theo quy trình thực tế trong doanh nghiệp bán lẻ thời trang**, từ việc thấu hiểu 3 bài toán kinh doanh trọng tâm cho đến xây dựng dashboard, phân tích dữ liệu, dự báo và đưa ra các khuyến nghị thực chiến (actionable insights).
 
-Dự án sẽ bao gồm toàn bộ quy trình phân tích dữ liệu:
+Dự án tuân thủ toàn bộ quy trình phân tích dữ liệu chuyên nghiệp:
 
-- Business Understanding (Hiểu bài toán kinh doanh)
-- Data Understanding (Tìm hiểu dữ liệu)
-- Data Cleaning & Validation (Làm sạch và kiểm định dữ liệu)
-- Exploratory Data Analysis (EDA)
-- SQL Analytics
-- Dashboard trực quan bằng Power BI
-- Machine Learning
-- Storytelling & Business Recommendation
-- Documentation & Portfolio
-
-Trong quá trình thực hiện, các công cụ AI như ChatGPT, Claude, Codex và Antigravity IDE sẽ được sử dụng để hỗ trợ lập trình, tối ưu quy trình và tăng tốc độ phát triển. Tuy nhiên, mọi quyết định về business, phân tích dữ liệu, lựa chọn mô hình và diễn giải kết quả đều sẽ được người thực hiện kiểm tra, đánh giá và chịu trách nhiệm.
+- **Business Understanding** (Hiểu bài toán kinh doanh theo 3 trụ cột chính)
+- **Data Understanding & Data Profiling** (Tìm hiểu & đánh giá chất lượng dữ liệu)
+- **Data Cleaning & Validation** (Làm sạch và kiểm định dữ liệu nghiêm ngặt)
+- **Exploratory Data Analysis (EDA)** (Phân tích khám phá chuyên sâu)
+- **SQL Analytics** (Truy vấn phân tích dữ liệu bằng SQL)
+- **Dashboard trực quan bằng Power BI** (Thiết kế đa tab chuẩn FOXIA)
+- **Machine Learning & Personalization Baseline** (Phân cụm, dự báo Churn, Basket Analysis & Demand Forecasting)
+- **Storytelling & Business Recommendation** (Truyền tải insight & đề xuất hành động theo ma trận Impact/Effort)
+- **Documentation & Portfolio** (Tài liệu hóa tiêu chuẩn cao)
 
 ---
 
@@ -30,243 +28,165 @@ Trong quá trình thực hiện, các công cụ AI như ChatGPT, Claude, Codex 
 
 H&M là một trong những thương hiệu bán lẻ thời trang lớn nhất thế giới, hoạt động theo mô hình **Omnichannel** (kết hợp giữa cửa hàng vật lý và kênh bán hàng trực tuyến).
 
-Là một doanh nghiệp hoạt động trong lĩnh vực **Fast Fashion**, H&M liên tục tung ra các bộ sưu tập mới với vòng đời sản phẩm ngắn, nhu cầu mua sắm thay đổi nhanh theo mùa và xu hướng thời trang. Điều này khiến việc phân tích hành vi khách hàng, quản lý tồn kho và dự báo nhu cầu trở thành những bài toán rất quan trọng.
+Là một doanh nghiệp hoạt động trong lĩnh vực **Fast Fashion**, H&M liên tục tung ra các bộ sưu tập mới với vòng đời sản phẩm ngắn, nhu cầu mua sắm thay đổi nhanh theo mùa và xu hướng thời trang. Điều này tạo ra 3 thách thức cốt lõi:
+1. Tỷ lệ giữ chân khách hàng (Retention) và nguy cơ rời bỏ (Churn) do sự cạnh tranh khốc liệt.
+2. Nhu cầu cá nhân hóa trải nghiệm (Personalization) giữa hàng chục nghìn danh mục sản phẩm đa dạng.
+3. Áp lực tối ưu hóa lượng hàng tồn kho (Inventory) và đưa ra quyết định nhập hàng (Merchandising) chính xác dựa trên lịch sử bán hàng.
 
-Bộ dữ liệu của H&M mô phỏng khá sát môi trường kinh doanh thực tế khi bao gồm:
-
-- Thông tin khách hàng
-- Danh mục sản phẩm
-- Lịch sử giao dịch
-
-Đây là nền tảng phù hợp để thực hiện một dự án Retail Data Analytics hoàn chỉnh và xây dựng các mô hình Machine Learning phục vụ hoạt động kinh doanh.
-
----
-
-# 3. Bài toán kinh doanh
-
-Dự án hướng tới việc giải quyết các bài toán kinh doanh thường gặp trong ngành bán lẻ thời trang:
-
-- Làm thế nào để tăng doanh thu trên mỗi khách hàng?
-- Làm thế nào để tăng tỷ lệ khách hàng quay lại mua hàng và giảm tỷ lệ rời bỏ (Churn)?
-- Làm thế nào để dự báo nhu cầu nhằm hỗ trợ quản lý tồn kho?
-- Làm thế nào để tối ưu ngân sách marketing bằng cách tập trung vào nhóm khách hàng có giá trị cao?
-- Làm thế nào để cá nhân hóa trải nghiệm mua sắm?
-- Làm thế nào để đưa ra quyết định nhập hàng dựa trên dữ liệu lịch sử?
+Bộ dữ liệu của H&M chứa thông tin thực tế về:
+- **Customers**: Thông tin phân vùng, độ tuổi và thói quen nhận tin.
+- **Articles**: Danh mục, phân loại màu sắc, nhóm hàng thời trang.
+- **Transactions**: Lịch sử giao dịch chi tiết theo thời gian và kênh bán hàng.
 
 ---
 
-# 4. Stakeholder
+# 3. Ba Bài Toán Kinh Doanh Trọng Tâm (Core Business Pillars)
 
-Mặc dù đây là dự án cá nhân, toàn bộ quá trình phân tích sẽ được xây dựng như một dự án thực tế trong doanh nghiệp với nhiều nhóm người sử dụng kết quả khác nhau.
+Theo định hướng tối ưu bài toán kinh doanh, dự án tập trung giải quyết **3 vấn đề trọng tâm chính**:
 
-| Stakeholder | Nhu cầu |
-|-------------|---------|
-| **CMO / Marketing Team** | Hiểu rõ phân khúc khách hàng, tối ưu chiến dịch marketing, tăng tỷ lệ giữ chân khách hàng và nâng cao hiệu quả ngân sách marketing. |
-| **Merchandising / Category Manager** | Xác định sản phẩm và danh mục bán chạy, theo dõi xu hướng tiêu dùng và hỗ trợ quyết định nhập hàng. |
-| **Supply Chain / Demand Planning** | Dự báo nhu cầu theo thời gian nhằm hạn chế tình trạng thiếu hàng hoặc tồn kho quá nhiều. |
-| **E-commerce / Product Team** | Hiểu hành vi mua sắm, cải thiện trải nghiệm người dùng và tăng tỷ lệ chuyển đổi trên website hoặc ứng dụng. |
-| **Ban lãnh đạo (Executive/C-Level)** | Theo dõi tình hình kinh doanh thông qua dashboard tổng quan và các KPI quan trọng để hỗ trợ ra quyết định chiến lược. |
+```
+                                  ┌─────────────────────────────────────────┐
+                                  │      H&M FASHION ANALYTICS CORE         │
+                                  └────────────────────┬────────────────────┘
+                                                       │
+         ┌─────────────────────────────────────────────┼─────────────────────────────────────────────┐
+         ▼                                             ▼                                             ▼
+┌─────────────────────────┐               ┌─────────────────────────┐               ┌─────────────────────────┐
+│       TRỤ CỘT 1         │               │       TRỤ CỘT 2         │               │       TRỤ CỘT 3         │
+│  Tăng Retention & Giảm  │               │   Cá Nhân Hóa Trải      │               │   Quyết Định Nhập Hàng  │
+│      Rời Bỏ (Churn)     │               │    Nghiệm Mua Sắm       │               │    Dựa Trên Dữ Liệu     │
+└─────────────────────────┘               └─────────────────────────┘               └─────────────────────────┘
+```
+
+### **Trụ cột 1: Làm thế nào để tăng tỷ lệ khách hàng quay lại mua hàng và giảm tỷ lệ rời bỏ (Churn)?**
+- **Mục tiêu**: Phân tích hành vi khách hàng, xác định chu kỳ quay lại (Purchase Cycle), phân đoạn khách hàng theo giá trị (RFM / CLV) và phát hiện sớm các dấu hiệu rủi ro rời bỏ để có chiến lược giữ chân phù hợp.
+
+### **Trụ cột 2: Làm thế nào để cá nhân hóa trải nghiệm mua sắm?**
+- **Mục tiêu**: Hiểu rõ sở thích cá nhân và hành vi mua kèm (Co-purchasing), ứng dụng Market Basket Analysis và mô hình gợi ý sản phẩm (Recommendation Engine) nhằm đề xuất đúng sản phẩm cho đúng phân khúc khách hàng vào đúng thời điểm.
+
+### **Trụ cột 3: Làm thế nào để đưa ra quyết định nhập hàng dựa trên dữ liệu lịch sử?**
+- **Mục tiêu**: Phân tích xu hướng tiêu dùng theo mùa, chu kỳ sống của dòng sản phẩm (Product Lifecycle) và xây dựng mô hình dự báo nhu cầu (Demand Forecasting) để tối ưu hóa danh mục và số lượng nhập hàng cho mùa tiếp theo.
 
 ---
 
-# 5. Các KPI quan trọng
+# 4. Stakeholder & Nhu cầu phân tích
 
-Các KPI dưới đây sẽ được sử dụng xuyên suốt quá trình phân tích, trực quan hóa và đánh giá kết quả.
+| Stakeholder | Trụ cột liên quan | Nhu cầu kinh doanh cốt lõi |
+|-------------|-------------------|----------------------------|
+| **CMO / Marketing Team** | Trụ cột 1 & 2 | Hiểu rõ phân khúc khách hàng (RFM), giảm tỷ lệ Churn, triển khai các chiến dịch Remarketing & Personalization tối ưu ngân sách. |
+| **Merchandising / Category Manager** | Trụ cột 3 | Xác định danh mục/mặt hàng bán chạy, đánh giá tốc độ quay vòng sản phẩm và đưa ra quyết định nhập hàng (Buying & Re-ordering). |
+| **Supply Chain / Demand Planning** | Trụ cột 3 | Dự báo nhu cầu theo danh mục/thời gian nhằm giảm tồn kho quá mức (Overstock) hoặc thiếu hàng (Stock-out). |
+| **E-commerce / Product Team** | Trụ cột 2 | Cá nhân hóa hiển thị sản phẩm mua kèm (Cross-sell / Up-sell), tăng tỷ lệ chuyển đổi (Conversion Rate) và giá trị đơn hàng (AOV). |
+| **Ban lãnh đạo (Executive/C-Level)** | Cả 3 Trụ cột | Theo dõi sức khỏe doanh nghiệp tổng quan qua Dashboard Power BI với các chỉ số Retention Rate, AOV, Sales Growth và Churn Rate. |
 
-## Doanh thu
+---
 
-- Tổng doanh thu
-- Doanh thu theo tháng
-- Tốc độ tăng trưởng doanh thu
-- Doanh thu theo danh mục sản phẩm
-- Doanh thu theo phân khúc khách hàng
+# 5. Các KPI quan trọng theo 3 Trụ Cột
 
-## Khách hàng
+Các chỉ số KPI dưới đây được thiết kế phục vụ trực tiếp 3 trụ cột kinh doanh:
 
-- Số lượng khách hàng đang hoạt động
-- Tỷ lệ khách hàng quay lại mua hàng (Repeat Purchase Rate)
-- Tỷ lệ giữ chân khách hàng (Retention Rate)
-- Giá trị vòng đời khách hàng (Customer Lifetime Value - CLV)
-- Tần suất mua hàng
-- Giá trị trung bình mỗi đơn hàng (Average Order Value - AOV)
-- Tỷ lệ khách hàng mới và khách hàng cũ
+## Trụ cột 1: Retention & Churn KPIs
+- **Repeat Purchase Rate (RPR)**: Tỷ lệ khách hàng mua từ 2 lần trở lên.
+- **Customer Churn Rate**: Tỷ lệ khách hàng không phát sinh giao dịch sau khoảng thời gian ngưỡng (ví dụ: 90 ngày / 180 ngày).
+- **Customer Lifetime Value (CLV)**: Giá trị vòng đời trung bình theo từng phân khúc.
+- **Recency, Frequency, Monetary (RFM Metrics)**: Điểm số phân hạng khách hàng.
+- **Cohort Retention Rate**: Tỷ lệ giữ chân khách hàng theo các nhóm gia nhập theo tháng.
 
-## Sản phẩm
+## Trụ cột 2: Personalization & Cross-Sell KPIs
+- **Average Order Value (AOV)**: Giá trị trung bình mỗi đơn hàng.
+- **Items Per Order (Basket Size)**: Số lượng sản phẩm trung bình trên một đơn hàng.
+- **Support, Confidence, Lift**: Chỉ số đánh giá độ mạnh của luật kết hợp sản phẩm (Market Basket Rules).
+- **Segment Product Preference Index**: Mức độ ưu thích danh mục theo độ tuổi/phân khúc.
 
-- Sản phẩm bán chạy nhất
-- Danh mục bán chạy nhất
-- Tốc độ tăng trưởng của từng danh mục
-- Hiệu suất bán hàng theo mùa
-
-## Dự báo
-
-- Dự báo doanh số theo danh mục
-- Dự báo khả năng khách hàng quay lại mua hàng
-- Dự báo xu hướng doanh thu
+## Trụ cột 3: Merchandising & Demand KPIs
+- **Total Revenue & Revenue Growth Rate**: Doanh thu tổng và tốc độ tăng trưởng MoM/YoY.
+- **Category / Product Velocity**: Tốc độ bán chạy lẻ của từng mã hàng.
+- **Forecasted Demand vs Actual Sales**: Nhu cầu dự báo so với thực tế.
+- **Seasonality Index**: Chỉ số biến động nhu cầu theo mùa trong năm.
 
 ---
 
 # 6. Tiêu chí đánh giá thành công của dự án
 
-Dự án được xem là thành công khi đạt được các mục tiêu sau.
+Dự án đạt tiêu chuẩn thành công khi hoàn thành các mục tiêu sau:
 
-## Về Business
-
-- Trả lời đầy đủ các câu hỏi kinh doanh đã đặt ra.
-- Đưa ra các khuyến nghị có thể áp dụng trong thực tế.
-
-## Về Analytics
-
-- Xây dựng được pipeline phân tích dữ liệu hoàn chỉnh từ dữ liệu thô đến insight.
-- Trực quan hóa dữ liệu rõ ràng, dễ hiểu.
-- Storytelling logic và có tính thuyết phục.
-
-## Về Machine Learning
-
-- Xây dựng tối thiểu hai mô hình Machine Learning phục vụ bài toán kinh doanh.
-- Đánh giá mô hình bằng các chỉ số phù hợp.
-- Giải thích kết quả mô hình theo góc nhìn kinh doanh thay vì chỉ trình bày chỉ số kỹ thuật.
-
-## Về Portfolio
-
-- Repository GitHub được tổ chức khoa học.
-- Tài liệu đầy đủ.
-- Quy trình có thể tái lập.
-- Dashboard Power BI trực quan.
-- Có thể trình bày toàn bộ dự án như một case study thực tế.
+1. **Về Business**: Giải quyết trọn vẹn 3 câu hỏi kinh doanh trọng tâm của mentor và đưa ra đề xuất hành động cụ thể theo ma trận Impact vs Effort.
+2. **Về Analytics & SQL**: Xây dựng pipeline truy vấn SQL và EDA sạch vẽ ra bức tranh toàn cảnh về Retention, Basket Pattern và Category Performance.
+3. **Về Power BI Dashboard**: Thiết kế Dashboard đa tab chuẩn phong cách FOXIA (Overview, Customer Analytics, Product/Inventory Analytics, Diagnostic Deep-dive).
+4. **Về Machine Learning**: Xây dựng thành công 4 mô hình/thuật toán tương ứng với 3 trụ cột (RFM Segmentation, Churn Classifier, Market Basket Recommendation Engine, Demand Forecasting).
+5. **Về Portfolio & Quality**: Mã nguồn sạch, tài liệu chuyên nghiệp, có khả năng tái lập và giải thích rõ góc nhìn business.
 
 ---
 
-# 7. Các câu hỏi kinh doanh
+# 7. Các câu hỏi kinh doanh chi tiết (Re-organized by 3 Pillars)
 
-Toàn bộ quá trình phân tích sẽ xoay quanh việc trả lời các câu hỏi dưới đây. Các câu hỏi sẽ được giải quyết bằng SQL, EDA, Dashboard hoặc Machine Learning tùy từng giai đoạn.
+Toàn bộ 18 câu hỏi phân tích được sắp xếp lại theo 3 trụ cột chính:
 
-## Phân tích sản phẩm
+### Nhóm 1: Tăng Retention & Giảm Churn (Phân tích Khách hàng)
+1. Tỷ lệ khách hàng quay lại mua hàng (Repeat Purchase Rate) hiện tại là bao nhiêu và biến động như thế nào theo thời gian?
+2. Phân khúc khách hàng nào (theo phân tích RFM) đóng góp nhiều doanh thu nhất?
+3. Nhóm khách hàng nào đang có nguy cơ rời bỏ (Churn Risk) cao nhất dựa trên chỉ số Recency và Frequency?
+4. Khách hàng mới (New Customers) và khách hàng cũ (Returning Customers) đóng góp doanh thu như thế nào?
+5. Giá trị vòng đời khách hàng (CLV) trung bình của từng nhóm tuổi và phân khúc là bao nhiêu?
+6. Nguyên lý Pareto (20% khách hàng đóng góp 80% doanh thu) có đúng với tập dữ liệu H&M không?
 
-1. Những sản phẩm nào mang lại doanh thu cao nhất?
-2. Danh mục sản phẩm nào tăng trưởng tốt nhất theo thời gian?
-3. Màu sắc hoặc loại sản phẩm nào được ưa chuộng theo từng mùa?
-4. Những sản phẩm nào có vòng đời bán ngắn nhất?
-5. Những sản phẩm nào thường được mua cùng nhau?
+### Nhóm 2: Cá nhân hóa trải nghiệm mua sắm (Personalization & Basket Analytics)
+7. Những cặp hoặc bộ sản phẩm/danh mục nào thường được khách hàng mua cùng nhau trong một giao dịch (Market Basket Analysis)?
+8. Độ tuổi và phân khúc khách hàng khác nhau có sở thích về nhóm hàng, màu sắc hay phong cách thời trang khác nhau như thế nào?
+9. Dựa trên lịch sử mua sắm gần nhất, sản phẩm tiếp theo (Next Best Item) nào nên được khuyến nghị cho từng phân khúc?
+10. Hành vi mua sắm và giá trị giỏ hàng (Basket Size / AOV) giữa kênh online và cửa hàng vật lý có sự khác biệt gì?
+11. Tỷ lệ mua lặp lại trên cùng một dòng sản phẩm (Category Loyalty) là bao nhiêu?
 
-## Phân tích khách hàng
-
-6. Phân khúc khách hàng nào đóng góp nhiều doanh thu nhất?
-7. Tỷ lệ khách hàng quay lại mua hàng của từng phân khúc là bao nhiêu?
-8. Khách hàng mới và khách hàng cũ đóng góp doanh thu như thế nào?
-9. Nhóm tuổi nào có mức chi tiêu cao nhất?
-10. Có nhóm khách hàng nào đang có dấu hiệu rời bỏ hay không?
-
-## Phân tích theo thời gian
-
-11. Doanh thu thay đổi như thế nào theo tháng và theo mùa?
-12. Ngày nào trong tuần có doanh thu cao nhất?
-13. Xu hướng doanh thu trong dài hạn như thế nào?
-
-## Phân tích theo kênh bán
-
-14. Hành vi mua sắm giữa kênh online và cửa hàng có gì khác nhau?
-15. Kênh bán nào tạo ra nhiều khách hàng có giá trị cao hơn?
-
-## Góc nhìn quản trị
-
-16. Giá trị vòng đời khách hàng trung bình của từng phân khúc là bao nhiêu?
-17. 20% khách hàng có tạo ra khoảng 80% doanh thu theo nguyên lý Pareto hay không?
-18. Danh mục sản phẩm nào nên được ưu tiên nhập hàng trong mùa tiếp theo?
+### Nhóm 3: Quyết định nhập hàng dựa trên dữ liệu lịch sử (Merchandising & Demand)
+12. Những danh mục (Category) và sản phẩm (Article) nào mang lại doanh thu và sản lượng cao nhất trong lịch sử?
+13. Xu hướng doanh thu và sản lượng bán thay đổi như thế nào theo tháng, theo mùa (Spring/Summer vs Autumn/Winter)?
+14. Chu kỳ bán (Product Lifecycle) của các sản phẩm mốt thời trang kéo dài trong bao lâu trước khi suy giảm doanh số?
+15. Những mặt hàng/danh mục nào có tốc độ tăng trưởng nhanh nhất và nên được ưu tiên nhập hàng cho mùa tiếp theo?
+16. Nhu cầu tiêu thụ (Demand) của từng danh mục chính trong 1 - 3 tháng tới dự báo sẽ là bao nhiêu?
+17. Ngày nào trong tuần và thời điểm nào trong tháng phát sinh nhu cầu mua sắm đỉnh điểm?
+18. Cơ cấu sản phẩm (Product Mix) hiện tại đã tối ưu giữa dòng hàng mặc hàng ngày (Basics) và dòng hàng thời trang xu hướng (Trend Items) chưa?
 
 ---
 
-# 8. Kế hoạch ứng dụng Machine Learning
+# 8. Kế hoạch ứng dụng Machine Learning & Analytics Baseline
 
-Machine Learning chỉ được triển khai sau khi hoàn thành các bước làm sạch dữ liệu, kiểm định dữ liệu và phân tích khám phá.
+Machine Learning được xây dựng để phục vụ trực tiếp 3 trụ cột kinh doanh:
 
-Các mô hình dự kiến bao gồm:
-
-## Customer Segmentation
-
-- Phân tích RFM
-- Phân cụm khách hàng bằng K-Means
-
-**Giá trị mang lại**
-
-- Xác định nhóm khách hàng có giá trị cao.
-- Hỗ trợ Marketing triển khai các chiến dịch phù hợp với từng nhóm khách hàng.
+| STT | Mô hình / Thuật toán | Trụ cột phục vụ | Thuật toán dự kiến | Giá trị kinh doanh mang lại |
+|:---:|----------------------|-----------------|--------------------|-----------------------------|
+| **1** | **Customer Segmentation (RFM + K-Means)** | Trụ cột 1 & 2 | RFM Scoring, K-Means Clustering | Phân nhóm khách hàng thành các Segment (VIP, Loyal, At-Risk, Hibernating) để tối ưu chiến dịch giữ chân. |
+| **2** | **Customer Churn & Repeat Purchase Model** | Trụ cột 1 | Logistic Regression, Random Forest, XGBoost / LightGBM | Dự đoán xác suất một khách hàng sẽ rời bỏ hoặc quay lại mua hàng trong 90 ngày tới. |
+| **3** | **Market Basket & Recommendation Baseline** | Trụ cột 2 | Apriori / FP-Growth, Item-based Collaborative Filtering | Xây dựng các luật kết hợp mua hàng (Association Rules) và engine gợi ý sản phẩm tiếp theo cho từng phân khúc. |
+| **4** | **Category Sales & Demand Forecasting** | Trụ cột 3 | Prophet / ARIMA, LightGBM Time-Series Regression | Dự báo doanh số và sản lượng theo danh mục cho 1 - 3 tháng tới phục vụ kế hoạch nhập hàng. |
 
 ---
 
-## Purchase Prediction
-
-Dự đoán khả năng khách hàng sẽ tiếp tục mua hàng trong tương lai.
-
-**Giá trị mang lại**
-
-- Hỗ trợ giữ chân khách hàng.
-- Xây dựng các chương trình chăm sóc khách hàng phù hợp.
-
----
-
-## Category Sales Forecasting
-
-Dự báo doanh số của từng danh mục sản phẩm.
-
-**Giá trị mang lại**
-
-- Hỗ trợ lập kế hoạch nhập hàng.
-- Giảm tồn kho và hạn chế thiếu hàng.
-
----
-
-## Revenue Forecasting
-
-Dự báo doanh thu trong tương lai.
-
-**Giá trị mang lại**
-
-- Hỗ trợ lập kế hoạch kinh doanh.
-- Hỗ trợ ban lãnh đạo đưa ra mục tiêu doanh thu.
-
----
-
-# 9. Phạm vi dự án
+# 9. Phạm vi dự án (Project Scope)
 
 Dự án tập trung vào:
-
-- Retail Data Analytics
-- Data Cleaning & Validation
-- SQL Analytics
-- Exploratory Data Analysis (EDA)
-- Dashboard bằng Power BI
-- Customer Segmentation
-- Purchase Prediction
-- Category Sales Forecasting
-- Revenue Forecasting
-- Business Storytelling
-
-Mục tiêu là xây dựng một dự án phân tích dữ liệu hoàn chỉnh theo quy trình doanh nghiệp thực tế.
+- **Exploratory Data Analysis (EDA)** & **SQL Analytics** sâu rộng.
+- **Power BI Dashboard** thiết kế đa tab chuẩn FOXIA (Overview, Customer Analytics, Product/Inventory Analytics, Diagnostic Deep-dive).
+- **Customer Segmentation** (RFM & K-Means).
+- **Customer Churn Prediction** (Supervised Binary Classification).
+- **Personalization Baseline** (Market Basket Analysis & Segment-Based Recommender).
+- **Demand Forecasting** (Time-series forecasting cho Category Sales).
+- **Business Recommendations** (Chiến lược giữ chân, gợi ý nhập hàng và cá nhân hóa).
 
 ---
 
-# 10. Ngoài phạm vi dự án
+# 10. Khống chế phạm vi (Out of Scope)
 
-Các nội dung dưới đây sẽ **không thực hiện** trong phạm vi dự án:
-
-- Recommendation System hoàn chỉnh (Candidate Generation, ANN Search, Ranking...)
-- Xử lý ảnh sản phẩm bằng Computer Vision
-- Deep Learning trên dữ liệu hình ảnh
-- Phân tích dữ liệu thời gian thực (Real-time Analytics)
-- Triển khai Production, API hoặc MLOps
-
-Lý do là các nội dung trên làm tăng đáng kể độ phức tạp của dự án nhưng không mang lại nhiều giá trị đối với mục tiêu chính là Data Analytics và Business Intelligence.
+Các nội dung dưới đây nằm **ngoài phạm vi triển khai** để giữ dự án tập trung vào Data Analytics & Business Value:
+- Xây dựng hệ thống Recommendation công nghiệp phức tạp thời gian thực (Real-time Candidate Generation, Vector Search, Deep Learning Recommender).
+- Xử lý hình ảnh sản phẩm bằng Computer Vision (CNN/ResNet).
+- Hạ tầng MLOps phức tạp, Kubeflow hay Docker Kubernetes Orchestration.
+- Phân tích dữ liệu luồng Real-time Streaming (Kafka/Spark Streaming).
 
 ---
 
 # 11. Nguyên tắc thực hiện dự án
 
-Trong suốt quá trình thực hiện, dự án sẽ tuân theo các nguyên tắc sau:
-
-- Luôn bắt đầu từ bài toán kinh doanh trước khi lựa chọn giải pháp kỹ thuật.
-- Phân tích dữ liệu trước khi xây dựng Machine Learning.
-- Mỗi dashboard đều phải trả lời ít nhất một câu hỏi kinh doanh.
-- Mỗi mô hình Machine Learning đều phải phục vụ một mục tiêu kinh doanh cụ thể.
-- Chú trọng khả năng tái lập, chất lượng code và tài liệu bên cạnh hiệu quả mô hình.
-- AI chỉ đóng vai trò là công cụ hỗ trợ phát triển, không thay thế tư duy phân tích và ra quyết định.
+- **Business-First**: Mọi phân tích, biểu đồ và mô hình ML đều phải bắt đầu từ và phục vụ cho 1 trong 3 trụ cột kinh doanh.
+- **Empirical Rigor**: Luôn kiểm định chất lượng dữ liệu trước khi rút ra kết luận.
+- **FOXIA Standard Dashboard**: Thiết kế Dashboard theo tư duy 5 tầng, rõ ràng, trực quan, hỗ trợ ra quyết định.
+- **Actionable Insights**: Mỗi phát hiện đều phải đi kèm khuyến nghị cụ thể (What → Why → What to do).
