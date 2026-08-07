@@ -84,12 +84,14 @@ Do tập dữ liệu gốc rất lớn, các file dữ liệu thô không đư�
 3. Giải nén file vừa tải về.
 4. Di chuyển 3 file dữ liệu chính (`articles.csv`, `customers.csv`, `transactions_train.csv`) vào thư mục `data/` của dự án này theo cấu trúc sau:
 
-hm-fashion-analytics/
+```text
+H-M_fashion_analytics/
 ├── data/
 │   ├── articles.csv
 │   ├── customers.csv
 │   └── transactions_train.csv
 ...
+```
 
 ---
 
