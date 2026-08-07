@@ -75,6 +75,24 @@ hm-fashion-analytics/
 
 ---
 
+## 📥 Tải Dữ liệu (Data Acquisition)
+
+Do tập dữ liệu gốc rất lớn, các file dữ liệu thô không được lưu trữ trực tiếp trên GitHub này. Để chạy được dự án, bạn cần tải dữ liệu trực tiếp từ Kaggle:
+
+1. Truy cập cuộc thi trên Kaggle: [H&M Personalized Fashion Recommendations](https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations/data)
+2. Đăng nhập/Đăng ký tài khoản Kaggle và chọn **Download All**.
+3. Giải nén file vừa tải về.
+4. Di chuyển 3 file dữ liệu chính (`articles.csv`, `customers.csv`, `transactions_train.csv`) vào thư mục `data/` của dự án này theo cấu trúc sau:
+
+hm-fashion-analytics/
+├── data/
+│   ├── articles.csv
+│   ├── customers.csv
+│   └── transactions_train.csv
+...
+
+---
+
 ## 💡 Hướng dẫn chạy dự án (How to Run)
 
 Thực hiện theo các bước sau để sao chép môi trường và chạy các Notebook trên máy tính của bạn:
